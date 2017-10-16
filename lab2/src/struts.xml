@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+    <package name="default" extends="struts-default">
+        <action name="checkauthor" class="action.check">
+       	 <result name="Success">/BookList.jsp</result>
+       	 <result name="Failed">/addAuthor.jsp</result>
+        </action>
+         <action name="getDetail" class="action.details">
+       		<result name="Success">/BookInfo.jsp</result>
+       	</action>
+       	<action name="deletebook" class="action.delete">
+       		<result name="Success">/checkByAuthor.jsp</result>
+       	</action>
+       	<action name="addbook" >
+       		<result>/adbook.jsp</result>
+       	</action>
+       	<action name="addbooksubmit" class="action.addabook">
+       		<result name="Success">/checkByAuthor.jsp</result>
+       		<result name="Failed">/addAuthor.jsp</result>
+       	</action>
+       	 <action name="addauthor" class="action.add">
+       	 <result name="Success">/adbook.jsp</result>
+        </action>
+       	<action name="upup" class="action.trans">
+       		<result name="Success">/up.jsp</result>
+       	</action>
+       	<action name="updatebook" class="action.update">
+       		<result name="Success">/checkByAuthor.jsp</result>
+       	</action>
+    </package>
+</struts>
+
+<!-- END SNIPPET: xworkSample -->

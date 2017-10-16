@@ -1,0 +1,8 @@
+<struts>
+    <include file="struts-default.xml"/>
+    <package name="tutorial" extends="struts-default">
+        <action name="HelloWorld" class="tutorial.HelloWorld">
+            <result>/HelloWorld.jsp</result>
+        </action>
+    </package>
+</struts>
